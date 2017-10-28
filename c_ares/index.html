@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `c_ares` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, c_ares">
+
+    <title>c_ares - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc mod">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Crate c_ares</p><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#constants">Constants</a></li><li><a href="#functions">Functions</a></li><li><a href="#types">Type Definitions</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'c_ares', ty: 'mod', relpath: '../'};</script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>c_ares</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/c_ares/lib.rs.html#1-133' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>A safe wrapper for the <a href="http://c-ares.haxx.se"><code>c-ares</code></a> library.</p>
+
+<p>This crate is a fairly faithful wrapper of <code>c-ares</code>; which is to say that
+it preserves some of the complication of using the underlying library:</p>
+
+<ul>
+<li><p>Direct usage of this crate requires you to pay attention to <code>c-ares</code> as
+it tells you which file descriptors it cares about, and to poll for
+activity on those file descriptors.</p></li>
+<li><p>This likely requires you to have an event loop or similar with which to
+integrate.</p></li>
+</ul>
+
+<p>If that sounds a bit too much like hard work, you should probably prefer
+the <a href="https://crates.io/crates/c-ares-resolver"><code>c-ares-resolver</code></a> crate,
+which takes care of all that stuff for you and presents a much simpler API.</p>
+
+<p>Still here?  Usage of this crate is as follows:</p>
+
+<ul>
+<li><p>Create a <code>Channel</code>.</p></li>
+<li><p>Make queries on the <code>Channel</code>.  Queries all take callbacks, which will
+be called when the query completes.</p></li>
+<li><p>Have <code>c-ares</code> tell you what file descriptors to listen on for read and /
+or write events.  You can do this either by providing a callback, which
+is called whenever the set of interesting file descriptors changes, or
+by querying the <code>Channel</code> directly either with <code>get_sock()</code> or with
+<code>fds()</code>.</p></li>
+<li><p>Do as <code>c-ares</code> asks.  That is, listen for the events that it requests,
+on the file descriptors that it cares about.</p></li>
+<li><p>When a file descriptor becomes readable or writable, call either
+<code>process_fd()</code> or <code>process()</code> on the <code>Channel</code> to tell <code>c-ares</code> what has
+happened.</p></li>
+<li><p>If you have queries pending and don&#39;t see events happening, you still
+need to call either <code>process_fd()</code> or <code>process()</code> at some point anyway -
+to give <code>c-ares</code> an opportunity to process any requests that have timed
+out.</p></li>
+</ul>
+
+<p>Complete examples showing how to use the library can be found
+<a href="https://github.com/dimbleby/rust-c-ares/tree/master/examples">here</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AAAAResult.html"
+                                  title='struct c_ares::AAAAResult'>AAAAResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The contents of a single AAAA record.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AAAAResults.html"
+                                  title='struct c_ares::AAAAResults'>AAAAResults</a></td>
+                           <td class='docblock-short'>
+                                <p>The result of a successful AAAA lookup.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AAAAResultsIter.html"
+                                  title='struct c_ares::AAAAResultsIter'>AAAAResultsIter</a></td>
+                           <td class='docblock-short'>
+                                <p>Iterator of <code>AAAAResult</code>s.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AResult.html"
+                                  title='struct c_ares::AResult'>AResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The contents of a single A record.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AResults.html"
+                                  title='struct c_ares::AResults'>AResults</a></td>
+                           <td class='docblock-short'>
+                                <p>The result of a successful A lookup.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AResultsIter.html"
+                                  title='struct c_ares::AResultsIter'>AResultsIter</a></td>
+                           <td class='docblock-short'>
+                                <p>Iterator of <code>AResult</code>s.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CNameResults.html"
+                                  title='struct c_ares::CNameResults'>CNameResults</a></td>
+                           <td class='docblock-short'>
+                                <p>The result of a successful CNAME lookup.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Channel.html"
+                                  title='struct c_ares::Channel'>Channel</a></td>
+                           <td class='docblock-short'>
+                                <p>A channel for name service lookups.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Flags.html"
+                                  title='struct c_ares::Flags'>Flags</a></td>
+                           <td class='docblock-short'>
+                                <p>Flags that may be passed when initializing a <code>Channel</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSock.html"
+                                  title='struct c_ares::GetSock'>GetSock</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about the set of sockets that <code>c-ares</code> is interested in, as
+returned by <code>get_sock()</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetSockIter.html"
+                                  title='struct c_ares::GetSockIter'>GetSockIter</a></td>
+                           <td class='docblock-short'>
+                                <p>Iterator for sockets of interest to <code>c-ares</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.HostAddressResultsIter.html"
+                                  title='struct c_ares::HostAddressResultsIter'>HostAddressResultsIter</a></td>
+                           <td class='docblock-short'>
+                                <p>Iterator of <code>IpAddr</code>s.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.HostAliasResultsIter.html"
+                                  title='struct c_ares::HostAliasResultsIter'>HostAliasResultsIter</a></td>
+                           <td class='docblock-short'>
+                                <p>Iterator of <code>&amp;&#39;a str</code>s.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.HostResults.html"
+                                  title='struct c_ares::HostResults'>HostResults</a></td>
+                           <td class='docblock-short'>
+                                <p>The result of a successful host lookup.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MXResult.html"
+                                  title='struct c_ares::MXResult'>MXResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The contents of a single MX record.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MXResults.html"
+                                  title='struct c_ares::MXResults'>MXResults</a></td>
+                           <td class='docblock-short'>
+                                <p>The result of a successful MX lookup.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MXResultsIter.html"
+                                  title='struct c_ares::MXResultsIter'>MXResultsIter</a></td>
+                           <td class='docblock-short'>
+                                <p>Iterator of <code>MXResult</code>s.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NAPTRResult.html"
+                                  title='struct c_ares::NAPTRResult'>NAPTRResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The contents of a single NAPTR record.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NAPTRResults.html"
+                                  title='struct c_ares::NAPTRResults'>NAPTRResults</a></td>
+                           <td class='docblock-short'>
+                                <p>The result of a successful NAPTR lookup.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NAPTRResultsIter.html"
+                                  title='struct c_ares::NAPTRResultsIter'>NAPTRResultsIter</a></td>
+                           <td class='docblock-short'>
+                                <p>Iterator of <code>NAPTRResult</code>s.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NIFlags.html"
+                                  title='struct c_ares::NIFlags'>NIFlags</a></td>
+                           <td class='docblock-short'>
+                                <p>Flags that may be provided on a call to <code>get_name_info()</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NSResults.html"
+                                  title='struct c_ares::NSResults'>NSResults</a></td>
+                           <td class='docblock-short'>
+                                <p>The result of a successful NS lookup.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NameInfoResult.html"
+                                  title='struct c_ares::NameInfoResult'>NameInfoResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The result of a successful name-info lookup.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Options.html"
+                                  title='struct c_ares::Options'>Options</a></td>
+                           <td class='docblock-short'>
+                                <p>Used to configure the behaviour of the name resolver.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PTRResults.html"
+                                  title='struct c_ares::PTRResults'>PTRResults</a></td>
+                           <td class='docblock-short'>
+                                <p>The result of a successful PTR lookup.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SOAResult.html"
+                                  title='struct c_ares::SOAResult'>SOAResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The result of a successful SOA lookup.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SRVResult.html"
+                                  title='struct c_ares::SRVResult'>SRVResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The contents of a single SRV record.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SRVResults.html"
+                                  title='struct c_ares::SRVResults'>SRVResults</a></td>
+                           <td class='docblock-short'>
+                                <p>The result of a successful SRV lookup.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SRVResultsIter.html"
+                                  title='struct c_ares::SRVResultsIter'>SRVResultsIter</a></td>
+                           <td class='docblock-short'>
+                                <p>Iterator of <code>SRVResult</code>s.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TXTResult.html"
+                                  title='struct c_ares::TXTResult'>TXTResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The contents of a single TXT record.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TXTResults.html"
+                                  title='struct c_ares::TXTResults'>TXTResults</a></td>
+                           <td class='docblock-short'>
+                                <p>The result of a successful TXT lookup.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TXTResultsIter.html"
+                                  title='struct c_ares::TXTResultsIter'>TXTResultsIter</a></td>
+                           <td class='docblock-short'>
+                                <p>Iterator of <code>TXTResult</code>s.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.AddressFamily.html"
+                                  title='enum c_ares::AddressFamily'>AddressFamily</a></td>
+                           <td class='docblock-short'>
+                                <p>Address families.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.Error.html"
+                                  title='enum c_ares::Error'>Error</a></td>
+                           <td class='docblock-short'>
+                                <p>Error codes that the library might return.</p>
+                           </td>
+                       </tr></table><h2 id='constants' class='section-header'><a href="#constants">Constants</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SOCKET_BAD.html"
+                                  title='constant c_ares::SOCKET_BAD'>SOCKET_BAD</a></td>
+                           <td class='docblock-short'>
+                                <p>An invalid socket / file descriptor.  Use this to represent &#39;no action&#39;
+when calling <code>process_fd()</code> on a channel.</p>
+                           </td>
+                       </tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.version.html"
+                                  title='fn c_ares::version'>version</a></td>
+                           <td class='docblock-short'>
+                                <p>Get the version number of the underlying <code>c-ares</code> library.</p>
+                           </td>
+                       </tr></table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.Result.html"
+                                  title='type c_ares::Result'>Result</a></td>
+                           <td class='docblock-short'>
+                                <p>The type used by this library for methods that might fail.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.Socket.html"
+                                  title='type c_ares::Socket'>Socket</a></td>
+                           <td class='docblock-short'>
+                                <p>The platform-specific file descriptor / socket type.  That is, either a
+<code>RawFd</code> or a <code>RawSocket</code>.</p>
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "c_ares";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

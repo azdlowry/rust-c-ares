@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `c_ares_sys` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, c_ares_sys">
+
+    <title>c_ares_sys - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc mod">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Crate c_ares_sys</p><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#constants">Constants</a></li><li><a href="#functions">Functions</a></li><li><a href="#types">Type Definitions</a></li><li><a href="#unions">Unions</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'c_ares_sys', ty: 'mod', relpath: '../'};</script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>c_ares_sys</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/c_ares_sys/lib.rs.html#1-16' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>Low-level bindings for the c-ares library.</p>
+
+<p>In most cases this crate should not be used directly.  The c-ares crate
+provides a safe wrapper and should be preferred wherever possible.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.apattern.html"
+                                  title='struct c_ares_sys::apattern'>apattern</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ares_addr6ttl.html"
+                                  title='struct c_ares_sys::ares_addr6ttl'>ares_addr6ttl</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ares_addr_node.html"
+                                  title='struct c_ares_sys::ares_addr_node'>ares_addr_node</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ares_addr_port_node.html"
+                                  title='struct c_ares_sys::ares_addr_port_node'>ares_addr_port_node</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ares_addrttl.html"
+                                  title='struct c_ares_sys::ares_addrttl'>ares_addrttl</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ares_channeldata.html"
+                                  title='struct c_ares_sys::ares_channeldata'>ares_channeldata</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ares_in6_addr.html"
+                                  title='struct c_ares_sys::ares_in6_addr'>ares_in6_addr</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ares_mx_reply.html"
+                                  title='struct c_ares_sys::ares_mx_reply'>ares_mx_reply</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ares_naptr_reply.html"
+                                  title='struct c_ares_sys::ares_naptr_reply'>ares_naptr_reply</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ares_options.html"
+                                  title='struct c_ares_sys::ares_options'>ares_options</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ares_soa_reply.html"
+                                  title='struct c_ares_sys::ares_soa_reply'>ares_soa_reply</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ares_socket_functions.html"
+                                  title='struct c_ares_sys::ares_socket_functions'>ares_socket_functions</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ares_srv_reply.html"
+                                  title='struct c_ares_sys::ares_srv_reply'>ares_srv_reply</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ares_txt_ext.html"
+                                  title='struct c_ares_sys::ares_txt_ext'>ares_txt_ext</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ares_txt_reply.html"
+                                  title='struct c_ares_sys::ares_txt_reply'>ares_txt_reply</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='constants' class='section-header'><a href="#constants">Constants</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_EADDRGETNETWORKPARAMS.html"
+                                  title='constant c_ares_sys::ARES_EADDRGETNETWORKPARAMS'>ARES_EADDRGETNETWORKPARAMS</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_EBADFAMILY.html"
+                                  title='constant c_ares_sys::ARES_EBADFAMILY'>ARES_EBADFAMILY</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_EBADFLAGS.html"
+                                  title='constant c_ares_sys::ARES_EBADFLAGS'>ARES_EBADFLAGS</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_EBADHINTS.html"
+                                  title='constant c_ares_sys::ARES_EBADHINTS'>ARES_EBADHINTS</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_EBADNAME.html"
+                                  title='constant c_ares_sys::ARES_EBADNAME'>ARES_EBADNAME</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_EBADQUERY.html"
+                                  title='constant c_ares_sys::ARES_EBADQUERY'>ARES_EBADQUERY</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_EBADRESP.html"
+                                  title='constant c_ares_sys::ARES_EBADRESP'>ARES_EBADRESP</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_EBADSTR.html"
+                                  title='constant c_ares_sys::ARES_EBADSTR'>ARES_EBADSTR</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_ECANCELLED.html"
+                                  title='constant c_ares_sys::ARES_ECANCELLED'>ARES_ECANCELLED</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_ECONNREFUSED.html"
+                                  title='constant c_ares_sys::ARES_ECONNREFUSED'>ARES_ECONNREFUSED</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_EDESTRUCTION.html"
+                                  title='constant c_ares_sys::ARES_EDESTRUCTION'>ARES_EDESTRUCTION</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_EFILE.html"
+                                  title='constant c_ares_sys::ARES_EFILE'>ARES_EFILE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_EFORMERR.html"
+                                  title='constant c_ares_sys::ARES_EFORMERR'>ARES_EFORMERR</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_ELOADIPHLPAPI.html"
+                                  title='constant c_ares_sys::ARES_ELOADIPHLPAPI'>ARES_ELOADIPHLPAPI</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_ENODATA.html"
+                                  title='constant c_ares_sys::ARES_ENODATA'>ARES_ENODATA</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_ENOMEM.html"
+                                  title='constant c_ares_sys::ARES_ENOMEM'>ARES_ENOMEM</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_ENONAME.html"
+                                  title='constant c_ares_sys::ARES_ENONAME'>ARES_ENONAME</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_ENOTFOUND.html"
+                                  title='constant c_ares_sys::ARES_ENOTFOUND'>ARES_ENOTFOUND</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_ENOTIMP.html"
+                                  title='constant c_ares_sys::ARES_ENOTIMP'>ARES_ENOTIMP</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_ENOTINITIALIZED.html"
+                                  title='constant c_ares_sys::ARES_ENOTINITIALIZED'>ARES_ENOTINITIALIZED</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_EOF.html"
+                                  title='constant c_ares_sys::ARES_EOF'>ARES_EOF</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_EREFUSED.html"
+                                  title='constant c_ares_sys::ARES_EREFUSED'>ARES_EREFUSED</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_ESERVFAIL.html"
+                                  title='constant c_ares_sys::ARES_ESERVFAIL'>ARES_ESERVFAIL</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_ETIMEOUT.html"
+                                  title='constant c_ares_sys::ARES_ETIMEOUT'>ARES_ETIMEOUT</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_FLAG_EDNS.html"
+                                  title='constant c_ares_sys::ARES_FLAG_EDNS'>ARES_FLAG_EDNS</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_FLAG_IGNTC.html"
+                                  title='constant c_ares_sys::ARES_FLAG_IGNTC'>ARES_FLAG_IGNTC</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_FLAG_NOALIASES.html"
+                                  title='constant c_ares_sys::ARES_FLAG_NOALIASES'>ARES_FLAG_NOALIASES</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_FLAG_NOCHECKRESP.html"
+                                  title='constant c_ares_sys::ARES_FLAG_NOCHECKRESP'>ARES_FLAG_NOCHECKRESP</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_FLAG_NORECURSE.html"
+                                  title='constant c_ares_sys::ARES_FLAG_NORECURSE'>ARES_FLAG_NORECURSE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_FLAG_NOSEARCH.html"
+                                  title='constant c_ares_sys::ARES_FLAG_NOSEARCH'>ARES_FLAG_NOSEARCH</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_FLAG_PRIMARY.html"
+                                  title='constant c_ares_sys::ARES_FLAG_PRIMARY'>ARES_FLAG_PRIMARY</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_FLAG_STAYOPEN.html"
+                                  title='constant c_ares_sys::ARES_FLAG_STAYOPEN'>ARES_FLAG_STAYOPEN</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_FLAG_USEVC.html"
+                                  title='constant c_ares_sys::ARES_FLAG_USEVC'>ARES_FLAG_USEVC</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_GETSOCK_MAXNUM.html"
+                                  title='constant c_ares_sys::ARES_GETSOCK_MAXNUM'>ARES_GETSOCK_MAXNUM</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_LIB_INIT_ALL.html"
+                                  title='constant c_ares_sys::ARES_LIB_INIT_ALL'>ARES_LIB_INIT_ALL</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_LIB_INIT_NONE.html"
+                                  title='constant c_ares_sys::ARES_LIB_INIT_NONE'>ARES_LIB_INIT_NONE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_LIB_INIT_WIN32.html"
+                                  title='constant c_ares_sys::ARES_LIB_INIT_WIN32'>ARES_LIB_INIT_WIN32</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_NI_DCCP.html"
+                                  title='constant c_ares_sys::ARES_NI_DCCP'>ARES_NI_DCCP</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_NI_DGRAM.html"
+                                  title='constant c_ares_sys::ARES_NI_DGRAM'>ARES_NI_DGRAM</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_NI_IDN.html"
+                                  title='constant c_ares_sys::ARES_NI_IDN'>ARES_NI_IDN</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_NI_IDN_ALLOW_UNASSIGNED.html"
+                                  title='constant c_ares_sys::ARES_NI_IDN_ALLOW_UNASSIGNED'>ARES_NI_IDN_ALLOW_UNASSIGNED</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_NI_IDN_USE_STD3_ASCII_RULES.html"
+                                  title='constant c_ares_sys::ARES_NI_IDN_USE_STD3_ASCII_RULES'>ARES_NI_IDN_USE_STD3_ASCII_RULES</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_NI_LOOKUPHOST.html"
+                                  title='constant c_ares_sys::ARES_NI_LOOKUPHOST'>ARES_NI_LOOKUPHOST</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_NI_LOOKUPSERVICE.html"
+                                  title='constant c_ares_sys::ARES_NI_LOOKUPSERVICE'>ARES_NI_LOOKUPSERVICE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_NI_NAMEREQD.html"
+                                  title='constant c_ares_sys::ARES_NI_NAMEREQD'>ARES_NI_NAMEREQD</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_NI_NOFQDN.html"
+                                  title='constant c_ares_sys::ARES_NI_NOFQDN'>ARES_NI_NOFQDN</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_NI_NUMERICHOST.html"
+                                  title='constant c_ares_sys::ARES_NI_NUMERICHOST'>ARES_NI_NUMERICHOST</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_NI_NUMERICSCOPE.html"
+                                  title='constant c_ares_sys::ARES_NI_NUMERICSCOPE'>ARES_NI_NUMERICSCOPE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_NI_NUMERICSERV.html"
+                                  title='constant c_ares_sys::ARES_NI_NUMERICSERV'>ARES_NI_NUMERICSERV</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_NI_SCTP.html"
+                                  title='constant c_ares_sys::ARES_NI_SCTP'>ARES_NI_SCTP</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_NI_TCP.html"
+                                  title='constant c_ares_sys::ARES_NI_TCP'>ARES_NI_TCP</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_NI_UDP.html"
+                                  title='constant c_ares_sys::ARES_NI_UDP'>ARES_NI_UDP</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_OPT_DOMAINS.html"
+                                  title='constant c_ares_sys::ARES_OPT_DOMAINS'>ARES_OPT_DOMAINS</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_OPT_EDNSPSZ.html"
+                                  title='constant c_ares_sys::ARES_OPT_EDNSPSZ'>ARES_OPT_EDNSPSZ</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_OPT_FLAGS.html"
+                                  title='constant c_ares_sys::ARES_OPT_FLAGS'>ARES_OPT_FLAGS</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_OPT_LOOKUPS.html"
+                                  title='constant c_ares_sys::ARES_OPT_LOOKUPS'>ARES_OPT_LOOKUPS</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_OPT_NDOTS.html"
+                                  title='constant c_ares_sys::ARES_OPT_NDOTS'>ARES_OPT_NDOTS</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_OPT_NOROTATE.html"
+                                  title='constant c_ares_sys::ARES_OPT_NOROTATE'>ARES_OPT_NOROTATE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_OPT_ROTATE.html"
+                                  title='constant c_ares_sys::ARES_OPT_ROTATE'>ARES_OPT_ROTATE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_OPT_SERVERS.html"
+                                  title='constant c_ares_sys::ARES_OPT_SERVERS'>ARES_OPT_SERVERS</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_OPT_SOCK_RCVBUF.html"
+                                  title='constant c_ares_sys::ARES_OPT_SOCK_RCVBUF'>ARES_OPT_SOCK_RCVBUF</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_OPT_SOCK_SNDBUF.html"
+                                  title='constant c_ares_sys::ARES_OPT_SOCK_SNDBUF'>ARES_OPT_SOCK_SNDBUF</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_OPT_SOCK_STATE_CB.html"
+                                  title='constant c_ares_sys::ARES_OPT_SOCK_STATE_CB'>ARES_OPT_SOCK_STATE_CB</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_OPT_SORTLIST.html"
+                                  title='constant c_ares_sys::ARES_OPT_SORTLIST'>ARES_OPT_SORTLIST</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_OPT_TCP_PORT.html"
+                                  title='constant c_ares_sys::ARES_OPT_TCP_PORT'>ARES_OPT_TCP_PORT</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_OPT_TIMEOUT.html"
+                                  title='constant c_ares_sys::ARES_OPT_TIMEOUT'>ARES_OPT_TIMEOUT</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_OPT_TIMEOUTMS.html"
+                                  title='constant c_ares_sys::ARES_OPT_TIMEOUTMS'>ARES_OPT_TIMEOUTMS</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_OPT_TRIES.html"
+                                  title='constant c_ares_sys::ARES_OPT_TRIES'>ARES_OPT_TRIES</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_OPT_UDP_PORT.html"
+                                  title='constant c_ares_sys::ARES_OPT_UDP_PORT'>ARES_OPT_UDP_PORT</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_SOCKET_BAD.html"
+                                  title='constant c_ares_sys::ARES_SOCKET_BAD'>ARES_SOCKET_BAD</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.ARES_SUCCESS.html"
+                                  title='constant c_ares_sys::ARES_SUCCESS'>ARES_SUCCESS</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_cancel.html"
+                                  title='fn c_ares_sys::ares_cancel'>ares_cancel</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_create_query.html"
+                                  title='fn c_ares_sys::ares_create_query'>ares_create_query</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_destroy.html"
+                                  title='fn c_ares_sys::ares_destroy'>ares_destroy</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_destroy_options.html"
+                                  title='fn c_ares_sys::ares_destroy_options'>ares_destroy_options</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_dup.html"
+                                  title='fn c_ares_sys::ares_dup'>ares_dup</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_expand_name.html"
+                                  title='fn c_ares_sys::ares_expand_name'>ares_expand_name</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_expand_string.html"
+                                  title='fn c_ares_sys::ares_expand_string'>ares_expand_string</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_fds.html"
+                                  title='fn c_ares_sys::ares_fds'>ares_fds</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_free_data.html"
+                                  title='fn c_ares_sys::ares_free_data'>ares_free_data</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_free_hostent.html"
+                                  title='fn c_ares_sys::ares_free_hostent'>ares_free_hostent</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_free_string.html"
+                                  title='fn c_ares_sys::ares_free_string'>ares_free_string</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_get_servers.html"
+                                  title='fn c_ares_sys::ares_get_servers'>ares_get_servers</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_get_servers_ports.html"
+                                  title='fn c_ares_sys::ares_get_servers_ports'>ares_get_servers_ports</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_gethostbyaddr.html"
+                                  title='fn c_ares_sys::ares_gethostbyaddr'>ares_gethostbyaddr</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_gethostbyname.html"
+                                  title='fn c_ares_sys::ares_gethostbyname'>ares_gethostbyname</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_gethostbyname_file.html"
+                                  title='fn c_ares_sys::ares_gethostbyname_file'>ares_gethostbyname_file</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_getnameinfo.html"
+                                  title='fn c_ares_sys::ares_getnameinfo'>ares_getnameinfo</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_getsock.html"
+                                  title='fn c_ares_sys::ares_getsock'>ares_getsock</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_inet_ntop.html"
+                                  title='fn c_ares_sys::ares_inet_ntop'>ares_inet_ntop</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_inet_pton.html"
+                                  title='fn c_ares_sys::ares_inet_pton'>ares_inet_pton</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_init.html"
+                                  title='fn c_ares_sys::ares_init'>ares_init</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_init_options.html"
+                                  title='fn c_ares_sys::ares_init_options'>ares_init_options</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_library_cleanup.html"
+                                  title='fn c_ares_sys::ares_library_cleanup'>ares_library_cleanup</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_library_init.html"
+                                  title='fn c_ares_sys::ares_library_init'>ares_library_init</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_library_init_mem.html"
+                                  title='fn c_ares_sys::ares_library_init_mem'>ares_library_init_mem</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_library_initialized.html"
+                                  title='fn c_ares_sys::ares_library_initialized'>ares_library_initialized</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_mkquery.html"
+                                  title='fn c_ares_sys::ares_mkquery'>ares_mkquery</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_parse_a_reply.html"
+                                  title='fn c_ares_sys::ares_parse_a_reply'>ares_parse_a_reply</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_parse_aaaa_reply.html"
+                                  title='fn c_ares_sys::ares_parse_aaaa_reply'>ares_parse_aaaa_reply</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_parse_mx_reply.html"
+                                  title='fn c_ares_sys::ares_parse_mx_reply'>ares_parse_mx_reply</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_parse_naptr_reply.html"
+                                  title='fn c_ares_sys::ares_parse_naptr_reply'>ares_parse_naptr_reply</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_parse_ns_reply.html"
+                                  title='fn c_ares_sys::ares_parse_ns_reply'>ares_parse_ns_reply</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_parse_ptr_reply.html"
+                                  title='fn c_ares_sys::ares_parse_ptr_reply'>ares_parse_ptr_reply</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_parse_soa_reply.html"
+                                  title='fn c_ares_sys::ares_parse_soa_reply'>ares_parse_soa_reply</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_parse_srv_reply.html"
+                                  title='fn c_ares_sys::ares_parse_srv_reply'>ares_parse_srv_reply</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_parse_txt_reply.html"
+                                  title='fn c_ares_sys::ares_parse_txt_reply'>ares_parse_txt_reply</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_parse_txt_reply_ext.html"
+                                  title='fn c_ares_sys::ares_parse_txt_reply_ext'>ares_parse_txt_reply_ext</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_process.html"
+                                  title='fn c_ares_sys::ares_process'>ares_process</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_process_fd.html"
+                                  title='fn c_ares_sys::ares_process_fd'>ares_process_fd</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_query.html"
+                                  title='fn c_ares_sys::ares_query'>ares_query</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_save_options.html"
+                                  title='fn c_ares_sys::ares_save_options'>ares_save_options</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_search.html"
+                                  title='fn c_ares_sys::ares_search'>ares_search</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_send.html"
+                                  title='fn c_ares_sys::ares_send'>ares_send</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_set_local_dev.html"
+                                  title='fn c_ares_sys::ares_set_local_dev'>ares_set_local_dev</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_set_local_ip4.html"
+                                  title='fn c_ares_sys::ares_set_local_ip4'>ares_set_local_ip4</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_set_local_ip6.html"
+                                  title='fn c_ares_sys::ares_set_local_ip6'>ares_set_local_ip6</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_set_servers.html"
+                                  title='fn c_ares_sys::ares_set_servers'>ares_set_servers</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_set_servers_csv.html"
+                                  title='fn c_ares_sys::ares_set_servers_csv'>ares_set_servers_csv</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_set_servers_ports.html"
+                                  title='fn c_ares_sys::ares_set_servers_ports'>ares_set_servers_ports</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_set_servers_ports_csv.html"
+                                  title='fn c_ares_sys::ares_set_servers_ports_csv'>ares_set_servers_ports_csv</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_set_socket_callback.html"
+                                  title='fn c_ares_sys::ares_set_socket_callback'>ares_set_socket_callback</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_set_socket_configure_callback.html"
+                                  title='fn c_ares_sys::ares_set_socket_configure_callback'>ares_set_socket_configure_callback</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_set_socket_functions.html"
+                                  title='fn c_ares_sys::ares_set_socket_functions'>ares_set_socket_functions</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_set_sortlist.html"
+                                  title='fn c_ares_sys::ares_set_sortlist'>ares_set_sortlist</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_strerror.html"
+                                  title='fn c_ares_sys::ares_strerror'>ares_strerror</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_timeout.html"
+                                  title='fn c_ares_sys::ares_timeout'>ares_timeout</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ares_version.html"
+                                  title='fn c_ares_sys::ares_version'>ares_version</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.ares_callback.html"
+                                  title='type c_ares_sys::ares_callback'>ares_callback</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.ares_channel.html"
+                                  title='type c_ares_sys::ares_channel'>ares_channel</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.ares_host_callback.html"
+                                  title='type c_ares_sys::ares_host_callback'>ares_host_callback</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.ares_nameinfo_callback.html"
+                                  title='type c_ares_sys::ares_nameinfo_callback'>ares_nameinfo_callback</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.ares_sock_config_callback.html"
+                                  title='type c_ares_sys::ares_sock_config_callback'>ares_sock_config_callback</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.ares_sock_create_callback.html"
+                                  title='type c_ares_sys::ares_sock_create_callback'>ares_sock_create_callback</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.ares_sock_state_cb.html"
+                                  title='type c_ares_sys::ares_sock_state_cb'>ares_sock_state_cb</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.ares_socket_t.html"
+                                  title='type c_ares_sys::ares_socket_t'>ares_socket_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.ares_socklen_t.html"
+                                  title='type c_ares_sys::ares_socklen_t'>ares_socklen_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.ares_ssize_t.html"
+                                  title='type c_ares_sys::ares_ssize_t'>ares_ssize_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='unions' class='section-header'><a href="#unions">Unions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="union" href="union.ares_addr_node__bindgen_ty_1.html"
+                                  title='union c_ares_sys::ares_addr_node__bindgen_ty_1'>ares_addr_node__bindgen_ty_1</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="union" href="union.ares_addr_port_node__bindgen_ty_1.html"
+                                  title='union c_ares_sys::ares_addr_port_node__bindgen_ty_1'>ares_addr_port_node__bindgen_ty_1</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="union" href="union.ares_in6_addr__bindgen_ty_1.html"
+                                  title='union c_ares_sys::ares_in6_addr__bindgen_ty_1'>ares_in6_addr__bindgen_ty_1</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "c_ares_sys";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

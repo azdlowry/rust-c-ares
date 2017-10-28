@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Options` struct in crate `c_ares`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Options">
+
+    <title>c_ares::Options - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct Options</p><div class="block items"><ul><li><a href="#methods">Methods</a></li><li><a href="#implementations">Trait Implementations</a></li></ul></div><p class='location'><a href='index.html'>c_ares</a></p><script>window.sidebarCurrent = {name: 'Options', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>c_ares</a>::<wbr><a class="struct" href=''>Options</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/c_ares/channel.rs.html#94-100' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Options { /* fields omitted */ }</pre><div class='docblock'><p>Used to configure the behaviour of the name resolver.</p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../c_ares/struct.Options.html" title="struct c_ares::Options">Options</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares/channel.rs.html#114-245' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class="method"><span id='new.v' class='invisible'><code>fn <a href='#method.new' class='fnname'>new</a>() -&gt; Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares/channel.rs.html#116-118' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns a fresh <code>Options</code>, on which no values are set.</p>
+</div><h4 id='method.set_flags' class="method"><span id='set_flags.v' class='invisible'><code>fn <a href='#method.set_flags' class='fnname'>set_flags</a>(&amp;mut self, flags: <a class="struct" href="../c_ares/struct.Flags.html" title="struct c_ares::Flags">Flags</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares/channel.rs.html#122-126' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Set flags controlling the behaviour of the resolver.  The available
+flags are documented <a href="flags/index.html">here</a>.</p>
+</div><h4 id='method.set_timeout' class="method"><span id='set_timeout.v' class='invisible'><code>fn <a href='#method.set_timeout' class='fnname'>set_timeout</a>(&amp;mut self, ms: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares/channel.rs.html#132-136' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Set the number of milliseconds each name server is given to respond to
+a query on the first try.  (After the first try, the timeout algorithm
+becomes more complicated, but scales linearly with the value of
+timeout).  The default is 5000ms.</p>
+</div><h4 id='method.set_tries' class="method"><span id='set_tries.v' class='invisible'><code>fn <a href='#method.set_tries' class='fnname'>set_tries</a>(&amp;mut self, tries: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares/channel.rs.html#140-144' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Set the number of tries the resolver will try contacting each name
+server before giving up.  The default is four tries.</p>
+</div><h4 id='method.set_ndots' class="method"><span id='set_ndots.v' class='invisible'><code>fn <a href='#method.set_ndots' class='fnname'>set_ndots</a>(&amp;mut self, ndots: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares/channel.rs.html#150-154' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Set the number of dots which must be present in a domain name for it to
+be queried for &quot;as is&quot; prior to querying for it with the default domain
+extensions appended.  The default value is 1 unless set otherwise by
+resolv.conf or the RES_OPTIONS environment variable.</p>
+</div><h4 id='method.set_udp_port' class="method"><span id='set_udp_port.v' class='invisible'><code>fn <a href='#method.set_udp_port' class='fnname'>set_udp_port</a>(&amp;mut self, udp_port: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u16.html">u16</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares/channel.rs.html#158-162' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Set the UDP port to use for queries.  The default value is 53, the
+standard name service port.</p>
+</div><h4 id='method.set_tcp_port' class="method"><span id='set_tcp_port.v' class='invisible'><code>fn <a href='#method.set_tcp_port' class='fnname'>set_tcp_port</a>(&amp;mut self, tcp_port: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u16.html">u16</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares/channel.rs.html#166-170' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Set the TCP port to use for queries.  The default value is 53, the
+standard name service port.</p>
+</div><h4 id='method.set_domains' class="method"><span id='set_domains.v' class='invisible'><code>fn <a href='#method.set_domains' class='fnname'>set_domains</a>(&amp;mut self, domains: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">&amp;[</a>&amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares/channel.rs.html#174-181' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Set the domains to search, instead of the domains specified in
+resolv.conf or the domain derived from the kernel hostname variable.</p>
+</div><h4 id='method.set_lookups' class="method"><span id='set_lookups.v' class='invisible'><code>fn <a href='#method.set_lookups' class='fnname'>set_lookups</a>(&amp;mut self, lookups: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares/channel.rs.html#186-191' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Set the lookups to perform for host queries. <code>lookups</code> should be set to
+a string of the characters &quot;b&quot; or &quot;f&quot;, where &quot;b&quot; indicates a DNS lookup
+and &quot;f&quot; indicates a lookup in the hosts file.</p>
+</div><h4 id='method.set_socket_state_callback' class="method"><span id='set_socket_state_callback.v' class='invisible'><code>fn <a href='#method.set_socket_state_callback' class='fnname'>set_socket_state_callback</a>&lt;F&gt;(&amp;mut self, callback: F) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>Self <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;F: <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.FnMut.html" title="trait core::ops::function::FnMut">FnMut</a>(<a class="type" href="../c_ares/type.Socket.html" title="type c_ares::Socket">Socket</a>, <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) + <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> + 'static,&nbsp;</span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares/channel.rs.html#200-209' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Set the callback function to be invoked when a socket changes state.</p>
+
+<p><code>callback(socket, read, write)</code> will be called when a socket changes
+state:</p>
+
+<ul>
+<li> <code>read</code> is set to true if the socket should listen for read events</li>
+<li> <code>write</code> is set to true if the socket should listen for write events.</li>
+</ul>
+</div><h4 id='method.set_sock_send_buffer_size' class="method"><span id='set_sock_send_buffer_size.v' class='invisible'><code>fn <a href='#method.set_sock_send_buffer_size' class='fnname'>set_sock_send_buffer_size</a>(&amp;mut self, size: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares/channel.rs.html#212-216' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Set the socket send buffer size.</p>
+</div><h4 id='method.set_sock_receive_buffer_size' class="method"><span id='set_sock_receive_buffer_size.v' class='invisible'><code>fn <a href='#method.set_sock_receive_buffer_size' class='fnname'>set_sock_receive_buffer_size</a>(&amp;mut self, size: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares/channel.rs.html#219-223' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Set the socket receive buffer size.</p>
+</div><h4 id='method.set_rotate' class="method"><span id='set_rotate.v' class='invisible'><code>fn <a href='#method.set_rotate' class='fnname'>set_rotate</a>(&amp;mut self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares/channel.rs.html#226-230' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Configure round robin selection of nameservers.</p>
+</div><h4 id='method.set_no_rotate' class="method"><span id='set_no_rotate.v' class='invisible'><code>fn <a href='#method.set_no_rotate' class='fnname'>set_no_rotate</a>(&amp;mut self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares/channel.rs.html#233-237' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Prevent round robin selection of nameservers.</p>
+</div><h4 id='method.set_ednspsz' class="method"><span id='set_ednspsz.v' class='invisible'><code>fn <a href='#method.set_ednspsz' class='fnname'>set_ednspsz</a>(&amp;mut self, size: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares/channel.rs.html#240-244' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Set the EDNS packet size.</p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-Default' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html" title="trait core::default::Default">Default</a> for <a class="struct" href="../c_ares/struct.Options.html" title="struct c_ares::Options">Options</a></code><a href='#impl-Default' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares/channel.rs.html#102-112' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class="method"><span id='default.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares/channel.rs.html#103-111' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
+</div></div><h3 id='impl-Send' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> for <a class="struct" href="../c_ares/struct.Options.html" title="struct c_ares::Options">Options</a></code><a href='#impl-Send' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares/channel.rs.html#1014' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 id='impl-Sync' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a> for <a class="struct" href="../c_ares/struct.Options.html" title="struct c_ares::Options">Options</a></code><a href='#impl-Sync' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares/channel.rs.html#1015' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "c_ares";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

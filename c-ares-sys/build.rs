@@ -24,6 +24,7 @@ fn main() {
 
     // MSVC builds are different.
     let target = env::var("TARGET").unwrap();
+    let host = env::var("HOST").unwrap();
     if target.contains("msvc") {
         build_msvc(&target);
         return;
@@ -49,6 +50,11 @@ fn main() {
     config_opts.push("--enable-shared=no".to_string());
     config_opts.push("--enable-optimize".to_string());
     config_opts.push(format!("--prefix={}", dst.display()));
+
+    if target != host {
+        config_opts.push(format!("--build={}", host));
+        config_opts.push(format!("--host={}", target));
+    }
 
     // Prepare.
     let src = env::current_dir().unwrap();
